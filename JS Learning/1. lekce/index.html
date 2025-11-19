@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samostatna prace</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--Soucet 2 cisel pomoci prompt()-->
+    <form id="promptForm" method="post" action="#">
+        <input type="submit" value="Spustit prompt pro soucet 2 cisel">
+    </form>
+    <p id="result-prompt"></p>
+    <!--Soucet 2 cisel-->
+    <h2>Soucet 2 cisel</h2>
+    <form id="sumForm" method="post" action="#">
+        <label for="num1">Cislo 1:</label>
+        <input type="number" id="num1" name="num1" required>
+        <label for="num2">Cislo 2:</label>
+        <input type="number" id="num2" name="num2" required>
+        <input type="submit" value="Secti">
+    </form>
+     <p id="result-soucet2cisel"></p>
+
+    <!--zjisteni jestli je cislo sude/liche-->
+    <h2>Sudé nebo liché číslo</h2>
+    <form id="evenOddForm" method="post" action="#">
+        <label for="number">Zadejte číslo:</label>
+        <input type="number" id="number" name="number" required>
+        <input type="submit" value="Zjistit">
+    </form>
+    <p id="result-sude-liche"></p>
+    <!--Prevod Celsius na Fahrenheit-->
+    <h2>Prevod celsius na fahrenheit</h2>
+    <form id="temperatureForm" method="post" action="#">
+        <label for="celsius">Zadejte teplotu v celsiích:</label>
+        <input type="number" id="celsius" name="celsius" required>
+        <input type="submit" value="Převést">
+    </form>
+    <p id="result-teplota"></p>
+    <!--Kladne/Zaporne/0-->
+    <h2>Kladné, záporné nebo nula</h2>
+    <form id="kladne/zaporne/0" method="post" action="#">
+        <label for="numberPN">Zadejte číslo:</label>
+        <input type="number" id="cislo" name="cislo" required>
+        <input type="submit" value="Zjistit">
+    </form>
+    <p id="result-kladne-zaporne-0"></p>
+    <!--Jestli slovo obsahuje "a"-->
+    <h2>Jestli slovo obsahuje "a"</h2>
+    <form id="obsahujeAForm" method="post" action="#">
+        <label for="word">Zadejte slovo:</label>
+        <input type="text" id="word" name="word" required>
+        <input type="submit" value="Zjistit">
+    </form>
+    <p id="result-obsahuje-a"></p>
+    <!--Analyzator textu-->
+    <h2>Analyzátor textu</h2>
+    <form id="PocitaniPismenForm" method="post" action="#">
+        <label for="word_to_count">Zadejte slovo:</label>
+        <input type="text" id="word_to_count" name="word_to_count" required>
+        <input type="submit" value="Zjistit">
+    </form>
+    <p id="result-obsahuje-pismenek"></p>
+    <!--Hledani Prvocisel-->
+    <h2>Hledání prvočísel</h2>
+    <form id="prvocislaForm" method="post" action="#">
+        <label for="prvocislo">Zadejte cislo na overeni:</label>
+        <input type="number" id="prvocislo" name="prvocislo" required>
+        <input type="submit" value="Najít prvočíslo">
+    </form>
+    <p id="result-prvocisla"></p>
+</body>
+</html>
