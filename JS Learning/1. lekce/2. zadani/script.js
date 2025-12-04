@@ -87,6 +87,28 @@ document.getElementById("btn38").onclick = function() {
       - Pokud není validní, zobraz chybovou hlášku.
       - Použij jednoduchou podmínku a funkci validateForm().
 */
+function validateForm() {
+    const name = document.getElementById("name39").value;
+    const email = document.getElementById("email39").value;
+    
+    if (name === "" || email === "") {
+        alert("Chyba: Vyplň jméno a email!");
+        return false;
+    }
+    
+    if (!email.includes("@")) {
+        alert("Chyba: Zadej validní email!");
+        return false;
+    }
+    
+    alert("Formulář je validní!");
+    return true;
+}
+
+document.getElementById("form39").addEventListener("submit", function(e) {
+    e.preventDefault();
+    validateForm();
+});
 
 /* 40) Pomocí slideru (input type="range") měň velikost písma textu.
       - Po změně hodnoty aktualizuj style.fontSize.
@@ -118,6 +140,22 @@ document.getElementById("btn38").onclick = function() {
       - Vytvoř klasickou funkci nebo arrow funkci.
       - Vyzkoušej rekurzi nebo cyklus.
 */
+;
+function factorial(input) {
+      
+      
+      variable = input;
+
+      for(i=0;i<input;i++) {
+            variable = variable * (input - i - 1);
+
+      }
+      console.log(variable);
+
+      return variable;
+
+
+}
 
 /* 43) Zjisti, zda je text palindrom („kajak“, „oko“).
       - Vytvoř funkci, která vrací true/false.
@@ -154,8 +192,29 @@ document.getElementById("btn38").onclick = function() {
       - Odstraňování úkolů
       - Každá operace musí být funkce.
 */
+function todo() {
+      const todoInput = document.getElementById("todoInput");
+      const todoList = document.getElementById("todoList");
+      
+      if(!todoInput.value) return;
+      
+      const li = document.createElement("li");
+      li.textContent = todoInput.value;
+      li.className = "flex justify-between items-center p-2 bg-gray-200 rounded mb-2";
+      
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Smazat";
+      deleteBtn.className = "bg-red-500 text-white px-2 py-1 rounded text-sm hover:bg-red-600";
+      deleteBtn.onclick = function() {
+            todoList.removeChild(li);
+      }
+      
+      li.appendChild(deleteBtn);
+      todoList.appendChild(li);
+    
+}
+
 
 /* 50) Ulož a načti data z localStorage (např. skóre nebo jméno).
       - Použij localStorage.setItem a localStorage.getItem.
-      - Zobraz načtená data v HTML.
-*/
+      - Zobraz načtená data v HTML.*/
