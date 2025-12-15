@@ -114,6 +114,10 @@ document.getElementById("form39").addEventListener("submit", function(e) {
       - Po změně hodnoty aktualizuj style.fontSize.
       - Hodnota ze slideru bude vstupním parametrem funkce.
 */
+document.getElementById("slider40").addEventListener("input", function() {
+    const fontSize = this.value + "px";
+    document.getElementById("text40").style.fontSize = fontSize;
+});
 
 
 /* =====================================================
@@ -135,6 +139,32 @@ document.getElementById("form39").addEventListener("submit", function(e) {
       - Funkce přijme délku jako parametr.
       - Použij Math.random a vlastní pole znaků.
 */
+function nahodneheslo(delka) {
+      const znaky = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+      let heslo = "";
+      for(let i=0;i<delka;i++) {
+            let a = Math.floor(Math.random() * znaky.length)
+            let b = znaky[a];
+            heslo += b;
+      }
+      return heslo;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("btn41").onclick = function() {
+        const delka = parseInt(document.getElementById("length41").value);
+        const heslo = nahodneheslo(delka);
+        document.getElementById("pass41").textContent = heslo;
+    };
+
+    document.getElementById("delka_hesla").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const delka = parseInt(document.getElementById("length41").value);
+        const heslo = nahodneheslo(delka);
+        document.getElementById("pass41").textContent = heslo;
+    });
+});
+
 
 /* 42) Spočítej faktoriál zadaného čísla.
       - Vytvoř klasickou funkci nebo arrow funkci.
